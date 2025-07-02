@@ -86,7 +86,7 @@ function addTodo() {
   input.value = '';
   updateSummary();
   document.getElementById('empty-msg').style.display = 'none';
-  showMessage('Quest added!');
+  showMessage('Task added!');
 }
 
 function deleteTodo(id) {
