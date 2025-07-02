@@ -19,18 +19,6 @@ function clearInput() {
   document.getElementById('todo-input').value = '';
 }
 
-function searchTodos() {
-  const query = document.getElementById('search').value.toLowerCase();
-  todos.forEach(todo => {
-    const el = document.getElementById(todo.id);
-    if (todo.text.toLowerCase().includes(query)) {
-      el.style.display = '';
-    } else {
-      el.style.display = 'none';
-    }
-  });
-}
-
 function addTodo() {
   const input = document.getElementById('todo-input');
   const value = input.value.trim();
@@ -52,18 +40,6 @@ function addTodo() {
 
   const actions = document.createElement('div');
 
-  const editBtn = document.createElement('button');
-  editBtn.innerText = 'Edit';
-  editBtn.className = 'btn';
-  editBtn.onclick = () => {
-    const newText = prompt('Edit todo:', todoObj.text);
-    if (newText && newText.trim()) {
-      todoObj.text = newText.trim();
-      const index = todos.findIndex(t => t.id === todoObj.id);
-      title.innerText = `${index + 1}. ${todoObj.text}`;
-    }
-  };
-
   const doneBtn = document.createElement('button');
   doneBtn.innerText = 'Mark Done';
   doneBtn.className = 'btn';
@@ -79,7 +55,7 @@ function addTodo() {
   deleteBtn.className = 'btn';
   deleteBtn.onclick = () => deleteTodo(id);
 
-  actions.append(editBtn, doneBtn, deleteBtn);
+  actions.append(doneBtn, deleteBtn);
   todoDiv.append(title, actions);
   document.getElementById('todos').appendChild(todoDiv);
 

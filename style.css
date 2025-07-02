@@ -50,8 +50,7 @@ body {
   max-width: 600px;
 }
 
-#todo-input,
-#search {
+#todo-input {
   width: 100%;
   max-width: 400px;
   padding: 8px 12px;
