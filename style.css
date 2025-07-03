@@ -195,13 +195,11 @@ body,
 
 .dark-mode #toggle-mode {
   background-color: #ffb6c1;
-  /* glowing violet-lavender */
   color: #222;
 }
 
 .dark-mode #toggle-mode:hover {
   background-color: #ff9aa2;
-  /* softer magical glow */
   color: #222;
 }
 
