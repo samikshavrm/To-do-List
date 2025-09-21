@@ -206,35 +206,3 @@ body,
 #summary {
   margin-top: 1rem;
 }
-
-#sparkle-trail {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 999;
-}
-
-.sparkle {
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: radial-gradient(circle, #d196ff 0%, #7c46a4 70%);
-  animation: floatSparkle 1.2s ease-out forwards;
-}
-
-@keyframes floatSparkle {
-  0% {
-    transform: translateY(0px) scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-30px) scale(0.5);
-    opacity: 0;
-  }
-}
-
-.dark-mode .sparkle {
-  background: radial-gradient(circle, #ffced2 0%, #ff9aa2 70%);
-}
